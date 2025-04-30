@@ -7,7 +7,7 @@ Code is in .m format.
 NETL_AP4_Control_Script runs everything.
 
 1.  Uploads AP4 baseline for the 2020 NEI.
-2.  Computes baseline PM~2.5~ concentrations.
+2.  Computes baseline PM<sub>2.5</sub> concentrations.
 3.  Calibrates estimates to the monitor data (coefficients applied from offline calibration).
 
 The CSV files are broken down by source type and pollutant.
