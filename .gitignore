@@ -1,2 +1,5 @@
 *.DS_Store
 *.mat
+cmu/*.zip
+cmu/ap4/*
+cmu/ap4t/*
