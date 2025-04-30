@@ -3,3 +3,5 @@
 cmu/*.zip
 cmu/ap4/*
 cmu/ap4t/*
+# Ignore the intermediate HTML files in tools
+tools/*.html

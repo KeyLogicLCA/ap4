@@ -1,3 +1,4 @@
 # Placeholder for CSV files on EDX
 *.*
 !.gitignore
+!info_matrix.csv
