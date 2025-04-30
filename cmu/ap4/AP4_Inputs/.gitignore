@@ -1,5 +1,0 @@
-# Do not add data files to the repository!
-# Have people to go to CMU's website to get their own copy:
-# https://nickmuller.tepper.cmu.edu/APModel.aspx
-*.*
-!.gitignore
