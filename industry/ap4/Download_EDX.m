@@ -5,10 +5,17 @@
 % info_dir = YOUR_DIRECTORY % location of git files..?
 % file_id = fopen([info_dir, 'info_matrix.csv'], "r");
 
-% load workspace called from control script-->PM2.5 base concentration-->load workspace-->call download edx
+%TODO
+% load workspace called from AP control script-->PM2.5 base concentration-->load workspace-->call download edx
+% Move API_key to control script.. give it empty string, use input fcn
 %% USER_INPUT_CHANGES - Matrices
 
-api_key = "0ec0e2fb-5af2-46ec-8170-7cec1ffe94f8"; % Replace with your actual API key
+#api_key defined in NETL AP4 Control Script as empty string
+if (isempty(strtrim(api_key)))
+  api_key = input("Enter your API key: ", "s");
+end
+disp(["API Key: ", api_key]);
+
 info_dir1 = 'Matrices/' %Location of git files... need help here??
 file_id1 = fopen([info_dir1, 'matrix.csv'], "r");
 
@@ -58,4 +65,3 @@ fclose(file_id2); #closes open file
 for i = 1:rows(data2)
    download_function(data2{i,1}, api_key, data2{i,2}, info_dir2);
 end
-
