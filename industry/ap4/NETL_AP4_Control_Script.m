@@ -8,6 +8,7 @@
 
 % Add a boolean switch to read industry emissions from file
 % as found in NETL_AP4_PM25_Concentration_Script.m
+api_key = "";
 use_industry_emissions = true;
 
 run PM_25_Base_Concentration
