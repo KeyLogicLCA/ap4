@@ -1,3 +1,4 @@
 # Placeholder for CSV files on EDX
 *.*
 !.gitignore
+!hdf5.csv
