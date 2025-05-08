@@ -1,0 +1,9 @@
+resource_id,resource_name
+93809f41-1e10-4c5f-9003-3396fb40224e,idw_dist_counties_within_100_miles.csv
+50de9480-5f9b-4a49-9040-cf3b02f56e1f,idw_dist_own_and_adjacent_level_2_counties.csv
+dc65a8b9-ed4b-4239-b304-abd0d7bfe87e,idw_dist_counties_within_50_miles.csv
+ee7210df-7d60-4639-99cd-e73e4e0b5071,idw_dist_own_and_adjacent_level_1_counties.csv
+d3c4d111-eccb-4884-a97e-314b0b913cdb,idw_dist_counties_within_30_miles.csv
+c140f6c2-bd4b-4b3e-93b7-1489922132f4,idw_dist_closest_10_counties.csv
+fc35e0d1-6ace-450c-85f3-8d9e7c949c9a,idw_dist_closest_5_counties.csv
+0f024fa5-5154-4934-91da-79a0adcf7fd6,idw_dist_closest_3_counties.csv
