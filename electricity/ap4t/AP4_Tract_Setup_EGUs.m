@@ -1,16 +1,23 @@
 %% Tract-level SR matrix
 % Marginal concentration matrices for input county
+%
+% CHANGELOG
+% - swap height for size
+% - Change lookup w/o table
+% - Swap out protected variable, index for idx
+
 eis = eis';
-F = height(eis); % number of input facilities
+F = size(eis, 1); % number of input facilities
 indices = zeros(F,1);
 for n = 1:F
     % Indices of included facilities
-    index = AP4_EGU_List.row(AP4_EGU_List.eis == eis(n,1),:);
-    if height(index) ~= 1
-        index = index(1);
-    end
-    indices(n,1) = index;
-end
+    % - note columns are ('row', 'fips', and 'eis')
+    idx = AP4_EGU_List(AP4_EGU_List(:,3) == eis(n,1), 1);
+    if size(idx, 1) ~= 1
+        idx = idx(1);
+    endif
+    indices(n,1) = idx;
+endfor
 
 %% Tract-level SR matrix interpolation
 % EGU Point sources
@@ -25,11 +32,14 @@ Trct_MC_EGU{1,5} = DataBase_MC{b,5}(indices,:); % voc
 %% Initialize marginal damage matrices for storage and export
 % EGU point sources
 Results_MC	= cell(1,5); % marginal concentrations
-Results_MM	= cell(1,5); % marginal mortality
-Results_MD	= cell(1,5); % marginal damages
-
 MC_Tract_Matrix	= zeros(R,F);
-MM_Tract_Matrix	= zeros(R,F);
-MD_Tract_Matrix	= zeros(R,F);
+
+if ~aqm_only
+    Results_MM	= cell(1,5); % marginal mortality
+    Results_MD	= cell(1,5); % marginal damages
+
+    MM_Tract_Matrix	= zeros(R,F);
+    MD_Tract_Matrix	= zeros(R,F);
+endif
 
 %% end of script.

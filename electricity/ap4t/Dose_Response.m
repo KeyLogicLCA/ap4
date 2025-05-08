@@ -7,7 +7,7 @@ if epi_study == 1
 elseif epi_study == 2
     dr = DR_Info(2,1);
     Pop_Exposed = Pop_Over25;
-end
+endif
 
 %% Infant dose-response
 % Post Neonatal Infant Mortality: Woodruff et al. (2006)
