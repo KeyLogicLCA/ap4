@@ -6,7 +6,7 @@ function download_function(resource_id, api_key, local_filename, info_dir)
   cmd = sprintf('curl -L -H "EDX-API-Key: %s" "%s" -o "%s"', api_key, url, save_path);
 
   if (exist(save_path, 'file'))
-    printf("The file '%s' exists.\n", filename);
+    printf("The file '%s' exists.\n", local_filename);
   else
     [status, result] = system(cmd);
     printf("Saving to: %s\n", save_path);
