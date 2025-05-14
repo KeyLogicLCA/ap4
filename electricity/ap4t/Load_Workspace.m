@@ -18,7 +18,7 @@
 %    specification (e.g., clear AP4_*List)
 
 % Make sure you have a copy of the input CSVs
-run Download_EDX_Tract.m
+run Download_EDX_Tract
 
 % Directory names
 input_dir = 'AP4_Tract_Inputs/';
