@@ -6,6 +6,8 @@
 %
 % last edited: 2023-02-27
 
+api_key = "";
+
 tic
 %% 0) Globals
 % Trigger air quality modeling only
