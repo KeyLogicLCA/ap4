@@ -43,7 +43,7 @@ end
 %% USER_INPUT_2 - IDW
 
 info_dir2 = 'IDW/' %Location of git files... need help here??
-file_id2 = fopen([info_dir2, 'idw.csv'], "r");
+file_id2 = fopen([info_dir1, info_dir2, 'idw.csv'], "r");
 
 header = fgetl(file_id2); % Read the header row (and discard it)
 
@@ -67,7 +67,7 @@ end
 %% USER_INPUT_3 - HDF5
 
 info_dir3 = 'HDF5/' %Location of git files... need help here??
-file_id3 = fopen([info_dir3, 'hdf5.csv'], "r");
+file_id3 = fopen([info_dir1, info_dir3, 'hdf5.csv'], "r");
 
 header = fgetl(file_id3); % Read the header row (and discard it)
 
