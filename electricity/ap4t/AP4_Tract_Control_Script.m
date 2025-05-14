@@ -6,7 +6,7 @@
 %
 % last edited: 2023-02-27
 
-api_key = "";
+api_key = ""; %check that api is initiated, otherwise change location in script
 
 tic
 %% 0) Globals
