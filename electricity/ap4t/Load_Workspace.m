@@ -17,6 +17,9 @@
 % -  Remove the clear; it screws up a lot; consider replacing with variable
 %    specification (e.g., clear AP4_*List)
 
+% Make sure you have a copy of the input CSVs
+run Download_EDX_Tract.m
+
 % Directory names
 input_dir = 'AP4_Tract_Inputs/';
 idw_dir = [input_dir 'IDW/'];
