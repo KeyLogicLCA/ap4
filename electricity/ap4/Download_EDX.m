@@ -5,27 +5,16 @@
 % info_dir = YOUR_DIRECTORY % location of git files..?
 % file_id = fopen([info_dir, 'info_matrix.csv'], "r");
 
-%TODO
-% load workspace called from AP control script-->PM2.5 base concentration-->load workspace-->call download edx
-% Move API_key to control script.. give it empty string, use input fcn
-%% USER_INPUT_CHANGES - Matrices
-
-#api_key defined in NETL AP4 Control Script as empty string
 if (isempty(strtrim(api_key)))
   api_key = input("Enter your API key: ", "s");
 end
 disp(["API Key: ", api_key]);
 
-info_dir1 = 'AP4_Inputs' 
-file_id1 = fopen([info_dir1, 'edx.csv'], "r");
-
-#if (file_id1 == -1) <-- this isnt working for some reason... but the files seem to download fine e.g. file_id1 = 44 but code stopped
-#  error("Could not open file: %s", [info_dir1, 'matrix.csv']); #updated name
-#end
-
+info_dir1 = 'AP4_Inputs/';
+file_id1 = fopen([info_dir1 'edx.csv'], "r");
 header = fgetl(file_id1); % Read the header row (and discard it)
 
-% Read data rows: rescource_IDs --> data1; resource_names-->data2
+% Read data rows: resource_IDs --> data1; resource_names-->data2
 data1 = {};
 while (!feof(file_id1))
   line1 = fgetl(file_id1);
