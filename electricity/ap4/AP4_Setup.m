@@ -2,8 +2,8 @@
 % S = ground and non-egu point
 % E = egu point
 
-S = 3108;
-E = 1859;
+S = 3108;  % number of counties
+E = 1859;  % number of EGUs
 
 %% Initialize marginal damage matrices for storage and export
 Results_MC        	= cell(3,5);

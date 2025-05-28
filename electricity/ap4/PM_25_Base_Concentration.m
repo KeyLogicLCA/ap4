@@ -13,6 +13,7 @@ HNO3(:,1) = NOx_Cal_base.*(Emissions_2017_NEI{1,1}(:,2)'*SR_Matrices_Ground{2,1}
 PM25_Direct(:,1) = PM25_Cal_base.*(Emissions_2017_NEI{1,1}(:,3)'*SR_Matrices_Ground{3,1});
 SO4(:,1) = SO2_Cal_base.*(Emissions_2017_NEI{1,1}(:,4)'*SR_Matrices_Ground{4,1});
 VOC(:,1) = VOC_Cal_base.*(Emissions_2017_NEI{1,1}(:,5)'*SR_Matrices_Ground{5,1});
+# NOTE: uses the same SR matrix as VOC
 VOC_B(:,1) = VOC_B_Cal_base.*(Emissions_2017_NEI{1,1}(:,6)'*SR_Matrices_Ground{5,1});
 
 %% Non-EGU point source emissions and intermediate concentrations
@@ -28,8 +29,8 @@ HNO3(:,3) = NOx_Cal_base.*(Emissions_2017_NEI{3,1}(:,2)'*SR_Matrices_Point_EGU{2
 PM25_Direct(:,3) = PM25_Cal_base.*(Emissions_2017_NEI{3,1}(:,3)'*SR_Matrices_Point_EGU{3,1});
 SO4(:,3) = SO2_Cal_base.*(Emissions_2017_NEI{3,1}(:,4)'*SR_Matrices_Point_EGU{4,1});
 VOC(:,3) = VOC_Cal_base.*(Emissions_2017_NEI{3,1}(:,5)'*SR_Matrices_Point_EGU{5,1});
-  
-%% Partition total nitrate and ammonium 
+
+%% Partition total nitrate and ammonium
 run Nitrate_Sulfate_Ammonium
 
 %% Store baseline concentrations
