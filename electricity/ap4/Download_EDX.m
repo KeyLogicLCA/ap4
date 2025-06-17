@@ -6,7 +6,7 @@
 % file_id = fopen([info_dir, 'info_matrix.csv'], "r");
 
 if (isempty(strtrim(api_key)))
-  api_key = input("Enter your API key: ", "s");
+  api_key = input("Enter your API key (enter to skip): ", "s");
 end
 disp(["API Key: ", api_key]);
 
