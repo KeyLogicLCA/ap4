@@ -4,6 +4,10 @@
 % TODO: needs updated for AP4_Control_Workspace.h5
 clear
 
+
+% Make sure you have a copy of the input CSVs
+run Download_EDX
+
 % Define the input directory
 input_dir = "AP4_Inputs/";
 
