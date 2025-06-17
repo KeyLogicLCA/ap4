@@ -2,6 +2,11 @@
 % Run time is < 10 min
 % Set working directory in 'Load_Workspace.m' and 'AP4_Outputs.m' before
 % starting the model
+
+#global variables
+api_key = "";
+use_industry_emissions = true;
+
 tic
 run PM_25_Base_Concentration
 run AP4_Setup

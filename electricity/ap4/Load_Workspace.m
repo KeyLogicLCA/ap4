@@ -1,9 +1,7 @@
 %% Load AP4 workspace
 % Pulls in emissions data, S-R matrices, population & mortality rate data,
 % dose-response information, and willingness-to-pay & economic data
-% TODO: needs updated for AP4_Control_Workspace.h5
 clear
-
 
 % Make sure you have a copy of the input CSVs
 run Download_EDX
