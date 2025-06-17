@@ -40,4 +40,5 @@ SR_Matrices_Point_EGU{3,1} = S.SR_Matrices_Point_EGU.element_2';
 SR_Matrices_Point_EGU{4,1} = S.SR_Matrices_Point_EGU.element_3';
 SR_Matrices_Point_EGU{5,1} = S.SR_Matrices_Point_EGU.element_4';
 
+clear S
 %% end of script.
