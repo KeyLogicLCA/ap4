@@ -65,3 +65,8 @@ fclose(file_id2); #closes open file
 for i = 1:rows(data2)
    download_function(data2{i,1}, api_key, data2{i,2}, info_dir2);
 end
+
+% Cleanup step
+clear data1 file_id1 info_dir1 line1 row1
+clear data2 file_id2 info_dir2 line2 row2
+clear header i
