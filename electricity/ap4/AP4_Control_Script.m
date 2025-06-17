@@ -1,11 +1,14 @@
 %% This script runs the AP4 model
 % Run time is < 10 min
-% Set working directory in 'Load_Workspace.m' and 'AP4_Outputs.m' before
-% starting the model
+% Make sure the working directory is electricity/ap4 before running model.
 
-#global variables
+% Global variables
+% - api_key (str) for EDX download (use 'abc' to skip)
+% - run_verbose (bool) for printing marginal concentration emissions progress
 api_key = "";
+run_verbose = false;
 
+% Main methods
 tic
 run PM_25_Base_Concentration
 run AP4_Setup
