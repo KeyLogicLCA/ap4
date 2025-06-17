@@ -5,7 +5,6 @@
 
 #global variables
 api_key = "";
-use_industry_emissions = true;
 
 tic
 run PM_25_Base_Concentration
