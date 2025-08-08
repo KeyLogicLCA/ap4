@@ -6,7 +6,8 @@
 % `cd` or `chdir` ............ Change directory
 % `who` ...................... Show variables in memory
 
-clear
+% Make sure you have a copy of the input CSVs
+run Download_EDX
 
 % Define folders
 info_dir = 'Info_Matrices/';

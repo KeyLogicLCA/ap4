@@ -1,0 +1,4 @@
+# Placeholder for CSV files on EDX
+*.*
+!.gitignore
+!ap4_tract_inputs.csv

@@ -58,7 +58,7 @@ foreach my $html_file (@html_files) {
     # Iterate through the found <div> elements and extract the data
     foreach my $div (@divs) {
         my $resource_id = $div->attr('data-resource');
-        my $resource_name = $div->attr('data-name');
+        my $resource_name = $div->attr('title');
 
         if (defined $resource_id && defined $resource_name) {
             $csv->say($csv_fh, [ $html_file, $resource_id, $resource_name ]);
