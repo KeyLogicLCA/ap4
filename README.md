@@ -1,3 +1,5 @@
+[![DOI - 10.18141/2574987](https://img.shields.io/badge/DOI-10.18141%2F2574987-blue)](https://doi.org/10.18141/2574987)
+
 # Overview
 The Air Pollution Emissions Experiments and Policy version 4 (AP4) reduced-form air quality model (RFM) was created by colleagues at Carnegie Mellon University (CMU) under the direction of N. Muller, PhD, and his graduate student L. Dennin, funded by the National Energy Technology Laboratory (2020&ndash;2024).
 
