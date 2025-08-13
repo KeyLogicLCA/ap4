@@ -9,8 +9,8 @@
 % load workspace called from AP control script-->PM2.5 base concentration-->load workspace-->call download edx
 % Move API_key to control script.. give it empty string, use input fcn
 
-#api_key defined in NETL AP4 Control Script as empty string
-if (isempty(strtrim(api_key)))
+% NOTE: api_key is defined in NETL AP4 Control Script as empty string
+if !(exist("api_key", "var")) || (isempty(strtrim(api_key)))
   api_key = input("Enter your API key: ", "s");
 end
 disp(["API Key: ", api_key]);
