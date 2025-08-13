@@ -4,7 +4,22 @@
 % modified for Air Quality Modeling only and memory management
 % Successfully tested running Octave 7.3.0 on macOS Monterey.
 %
-% last edited: 2023-02-27
+% last edited: 2025-08-13
+
+% Load packages
+try
+    pkg load hdf5oct
+catch
+    disp(" ")
+    disp("******************************************************")
+    disp(" ")
+    disp("WARNING: The `hdf5oct` package is not installed.")
+    disp("To install, please follow the instructions found here: ")
+    disp("https://gnu-octave.github.io/packages/hdf5oct/")
+    disp(" ")
+    disp("******************************************************")
+    disp(" ")
+end
 
 api_key = ""; %check that api is initiated, otherwise change location in script
 
