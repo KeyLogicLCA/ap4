@@ -10,7 +10,7 @@ eis = eis';
 F = size(eis, 1); % number of input facilities
 indices = zeros(F,1);
 for n = 1:F
-    % Indices of included facilities
+    % Indices of included facilities (idx is a scalar)
     % - note columns are ('row', 'fips', and 'eis')
     idx = AP4_EGU_List(AP4_EGU_List(:,3) == eis(n,1), 1);
     if size(idx, 1) ~= 1

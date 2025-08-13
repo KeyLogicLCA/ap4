@@ -44,6 +44,8 @@ Population_Data{1,1} = dlmread([input_dir 'population_2017.csv'], ' ');
 % County-level marginal concentrations (from AP4)
 % HDF5 FILE CREATED FROM MATLAB
 % Note that i, j and the row and col numbers
+% Therefore, S._1._1 is the 3108x3108 matrix for cell(1,1)
+% NOTE 1: the 'load' method reads the whole HDF5 file to memory.
 Cnty_MC = cell(3,5);
 S = load([hdf_dir 'cnty_mc.h5'], '-hdf5');
 for i=1:size(Cnty_MC, 1)
@@ -66,7 +68,7 @@ idw_cal2 = 'idw_dist_own_and_adjacent_level_2_counties.csv';
 
 % Inverse-distance weighted interpolation matrix
 % - arguably, this should be read after the idw user selection to
-%   avoid the overhead on computer memory
+%   avoid the overhead on computer memory (note, only 176 MB)
 IDW_Distribution = cell(3,3);
 IDW_Distribution{1,1} = dlmread([idw_dir idw_cc03], ',');
 IDW_Distribution{1,2} = dlmread([idw_dir idw_cc05], ',');
@@ -83,7 +85,7 @@ clearvars idw_cal1 idw_cal2
 % Tract-to-tract source-receptor matrix files
 % HDF5 FILE CREATED IN MATLAB
 % note: the group name is the column index
-% load time: about two minutes
+% load time: about two minutes (39.2 GB)
 Tract_to_Tract = cell(3108, 1);
 S = load([hdf_dir 'tract_to_tract.h5'], '-hdf5');
 for i=1:size(Tract_to_Tract, 1)

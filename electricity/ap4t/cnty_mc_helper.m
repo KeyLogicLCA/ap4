@@ -1,3 +1,7 @@
+% cnty_mc_helper.m
+%
+% Requires: hdf5oct package (https://gapost.github.io/hdf5oct/)
+% Installation instructions (https://gnu-octave.github.io/packages/hdf5oct/)
 
 function [value] = read_hdf_mc(i,j,s_index,r_index) #output value will be single mc concentration
     % read_hdf_mc : extract a single mc from the hdf5 file without loading all into memory
@@ -56,11 +60,11 @@ end
 % A. Load_workspace.m (7x)
 %   * already cleared up since replacing load at once with helper function
 % B. Tract_to_Tract_calibration.m (9x)
-% 
+%
 %**************************************************************
 % Need to find location of idx... instead of Cnty_MC{1,3}(idx,:), will use the helper
-% (idx,:) where idx decides the row, and take the entire column. should i reshape output 
-% of the helper function st. [value] is a column? and doesnt specify based on 
+% (idx,:) where idx decides the row, and take the entire column. should i reshape output
+% of the helper function st. [value] is a column? and doesnt specify based on
 
 % PMP
 % Cnty_MCs = Cnty_MC{1,3}(idx,:); % AP4 county-level
